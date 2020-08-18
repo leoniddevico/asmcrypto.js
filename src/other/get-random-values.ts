@@ -1,6 +1,6 @@
 export function getRandomValues(buf: Uint32Array | Uint8Array): void {
   if (typeof process !== 'undefined') {
-    const nodeCrypto = require('crypto');
+    const nodeCrypto = require('crypto-browserify');
     const bytes = nodeCrypto.randomBytes(buf.length);
     buf.set(bytes);
     return;
