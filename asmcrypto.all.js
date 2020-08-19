@@ -4167,13 +4167,6 @@ function BigNumber_extGCD(a, b) {
 }
 
 function getRandomValues(buf) {
-    console.log('PROCESS', process);
-    // if (typeof process !== 'undefined') {
-    //   const nodeCrypto = require('crypto');
-    //   const bytes = nodeCrypto.randomBytes(buf.length);
-    //   buf.set(bytes);
-    //   return;
-    // }s
     if (window.crypto && window.crypto.getRandomValues) {
         window.crypto.getRandomValues(buf);
         return;
